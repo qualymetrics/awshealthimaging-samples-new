@@ -1,4 +1,0 @@
-# FILE: .bandit
-[bandit]
-exclude = cdk.out,tests
-skips = B311,B608
