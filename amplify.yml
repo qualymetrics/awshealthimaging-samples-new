@@ -11,9 +11,9 @@ applications:
         preBuild:
           commands:
             - npm install -g @aws-amplify/cli@latest
-            # Use the package installer available in Amplify build environment
-            - n stable
-            - npm install -g jq
+            # Install jq using direct download
+            - curl -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 -o /usr/local/bin/jq
+            - chmod +x /usr/local/bin/jq
             - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
             - unzip -q /tmp/awscliv2.zip -d /tmp
             - /tmp/aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
